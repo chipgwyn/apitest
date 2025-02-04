@@ -28,5 +28,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: user/$IMAGE_NAME:$(date +%s)
+          tags: $IMAGE_NAME:$(date +%s)
       
