@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}/$(date +%s)
 
 jobs:
   build:
@@ -24,9 +24,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ GITHUB_REPOSITORY:$(date +%s) }}
+          tags: ${{ IMAGE_NAME }}
       
