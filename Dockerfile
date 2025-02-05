@@ -36,4 +36,4 @@ COPY --from=builder --chown=app:app /app /app
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Uses `--host 0.0.0.0` to allow access from outside the container
-CMD ["flask", "--app", "apitest", "run", "--host", "0.0.0.0"]
+CMD ["flask", "--app", "app/apitest", "run", "--host", "0.0.0.0"]
