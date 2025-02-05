@@ -13,7 +13,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
       - name: Docker meta
         id: meta
