@@ -30,4 +30,5 @@ jobs:
           push: true
           load: true
           tags: user/app:latest
+          labels: ghcr.io/chipgwyn/apitest
           platforms: linux/amd64,linux/arm64
